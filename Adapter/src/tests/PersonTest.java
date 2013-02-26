@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import example.AnotherPerson;
+import example.Nosrep;
 import example.Person;
 
 public class PersonTest {
@@ -14,7 +16,18 @@ public class PersonTest {
 		String actualAnswer;
 		Person classUnderTest = new Person();
 		actualAnswer = classUnderTest.whoAreYou();
-		assertEquals("Wrong Answer!"), expectedAnswer, actualAnswer);
+		assertEquals("Wrong Answer!", expectedAnswer, actualAnswer);
+	}
+	
+	
+	@Test
+	public void test2() {
+		String expectedAnswer = "A person"; 
+		String actualAnswer; 
+		AnotherPerson classUnderTest = new Nosrep(); 
+		
+		actualAnswer = classUnderTest.youAreWho(); 
+		assertEquals("Wrong Answer!", expectedAnswer, actualAnswer);
 	}
 
 }
